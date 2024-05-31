@@ -31,7 +31,6 @@ export class AppComponent {
   contactForm: FormGroup;
   
   constructor(){
-    /* const currentMonth = this.currentDate.getMonth();  */
     this.diaHoy = this.currentDate.getDate();
     this.sumMonth = this.currentDate.getMonth() + 1;
     this.publicKey = environments.emailPublicKey
@@ -55,8 +54,7 @@ export class AppComponent {
         message: this.contactForm.controls['message'].value
       };
 
-     console.log(templateParams)
-   /*  emailjs.send(this.emailServiceId, this.templateId, templateParams, this.publicKey)
+    emailjs.send(this.emailServiceId, this.templateId, templateParams, this.publicKey)
     .then((result: EmailJSResponseStatus) => {
       console.log(result.text);
       if(result.text){
@@ -66,7 +64,7 @@ export class AppComponent {
       }
     }, (error) => {
       console.log(error.text);
-    }); */
+    });
 } else {
     console.log("ERRORRR!!!!")
 }
