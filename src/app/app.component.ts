@@ -5,6 +5,7 @@ import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { environments } from '../environments/environments.environments';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -13,14 +14,14 @@ import { environments } from '../environments/environments.environments';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title: string = 'app-portfolio';
+  title: string = 'Portfolio Matias';
   myEmail: string = "matiassabbadini24@gmail.com"
   htmlText: string = 'HTML5'
   cssText: string = 'CSS3'
   anioHoy: number = new Date().getFullYear();
   currentDate: Date = new Date();
   sumMonth: number = 0;
-  diaHoy: number = 0;
+  diaHoy: number = 0;  
   userEmail: string = '';
   userName: string = '';
   message: string = '';
